@@ -6,13 +6,14 @@ font-family: 'Montserrat', sans-serif; */
 /* font-family: 'Fraunces', serif;
 font-family: 'Montserrat', sans-serif; */
 
-body{
+body {
     width: 375px;
     height: 667px;
     flex-grow: 0;
     padding: 28px 16px;
     background-color: #f2eae2;
 }
+
 .product-card {
     display: flex;
     flex-direction: column;
@@ -28,6 +29,7 @@ body{
     width: 100%;
     height: 240px;
     flex-grow: 0;
+    border-radius: 10px 10px 0 0;
 }
 
 h6 {
@@ -74,10 +76,16 @@ h1 {
     color: #6c7289;
 }
 
+.product-cost {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 24px;
+}
+
 .discounted-price {
     width: 127px;
     height: 32px;
-    margin: 0 19px 0 0;
+    padding-left: 24px;
     font-family: Fraunces;
     font-size: 32px;
     font-weight: bold;
@@ -102,32 +110,34 @@ h1 {
     letter-spacing: normal;
     text-align: left;
     color: #6c7289;
+    text-decoration: line-through;
 }
 
 button {
     width: 295px;
     height: 48px;
     flex-grow: 0;
-    margin: 20px 23px 0 25px;
+    margin: auto;
     padding: 15px 80px;
     border-radius: 8px;
+    border-style: none;
     background-color: #3d8168;
-    font-family: Montserrat;
+    font-family: 'Montserrat', sans-serif;
     font-size: 14px;
-    font-weight: bold;
+    font-weight: 500;
     font-stretch: normal;
     font-style: normal;
     line-height: normal;
     letter-spacing: normal;
     color: #fff;
-
+    grid-column: -3/-1;
+    cursor: pointer;
 }
 
-button i {
-    width: 14.4px;
-    height: 16px;
-    flex-grow: 0;
-    margin: 1px 11.6px 0 0;
-    padding: 3.2px 1.8px 1.6px 3.1px;
-    color: #fff;
+button:hover {
+    background-color: #1a4032;
 }
+
+/* @media screen and (min-width:375px) {
+    
+} */
